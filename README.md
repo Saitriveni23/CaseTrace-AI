@@ -1,32 +1,49 @@
-# React + TypeScript + Vite
+# CaseTrace AI 🔍
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+CaseTrace AI is an intelligent, AI-assisted First Information Report (FIR) Analysis and Investigation Support Dashboard. It is designed to help law enforcement and legal professionals quickly extract, analyze, and act upon information contained in FIR documents.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Document Upload**: Seamlessly upload FIR images or PDFs via an interactive drag-and-drop interface.
+- **Simulated AI Processing**: 
+  - **OCR Extraction**: Digitizes and cleans text from raw FIR documents.
+  - **Entity Profiling**: Automatically identifies and profiles key entities (victims, suspects, etc.).
+  - **Investigative Questions**: Generates targeted questions to assist investigators.
+  - **Strategic Roadmap**: Suggests actionable next steps for the investigation.
+  - **Location Mapping**: Extracts and categorizes key locations mentioned in the report.
+- **PDF Export**: Generate and download a beautifully formatted PDF report of the analysis with a single click.
+- **Stunning UI**: Features a modern dark mode, glassmorphism design, and smooth micro-animations for a premium user experience.
 
-## React Compiler
+## 🛠️ Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React (with TypeScript), Vite
+- **Styling**: Vanilla CSS (CSS Variables, Flexbox/Grid, Glassmorphism)
+- **Icons**: Lucide React
+- **PDF Generation**: html2pdf.js
 
-## Expanding the Oxlint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+Follow these steps to run the dashboard locally:
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+### 1. Clone the repository
+```bash
+git clone https://github.com/Saitriveni23/CaseTrace-AI.git
+cd CaseTrace-AI
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Start the development server
+```bash
+npm run dev
+```
+
+### 4. Open in browser
+Navigate to `http://localhost:5173` to view the application.
+
+## 📝 License
+
+This project is licensed under the MIT License.
