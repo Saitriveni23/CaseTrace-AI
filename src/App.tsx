@@ -78,7 +78,7 @@ function App() {
     const opt = {
       margin:       0.5,
       filename:     'FIR_Analysis_Report.pdf',
-      image:        { type: 'jpeg', quality: 0.98 },
+      image:        { type: 'jpeg' as const, quality: 0.98 },
       html2canvas:  { scale: 2, useCORS: true, backgroundColor: '#13131a' },
       jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
     };
@@ -106,7 +106,7 @@ function App() {
               Drag and drop an image or PDF of the FIR, or click to browse.
             </p>
             <input type="file" accept="image/*,.pdf" onChange={handleFileUpload} />
-            <button className="btn-primary" onClick={() => document.querySelector('input[type="file"]')?.click()}>
+            <button className="btn-primary" onClick={() => (document.querySelector('input[type="file"]') as HTMLInputElement)?.click()}>
               Select File
             </button>
           </div>
